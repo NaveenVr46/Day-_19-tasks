@@ -1,0 +1,139 @@
+HTML CODE:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <fieldset id="container">
+            <form name="calculator">
+    
+                <input id="display" type="text" name="display" readonly>
+    
+                <input class="button digits" type="button" value="7" onclick="calculator.display.value += '7'">
+                <input class="button digits" type="button" value="8" onclick="calculator.display.value += '8'">
+                <input class="button digits" type="button" value="9" onclick="calculator.display.value += '9'">
+                <input class="button mathButtons" type="button" value="+" onclick="calculator.display.value += ' + '">
+                <br>
+                <input class="button digits" type="button" value="4" onclick="calculator.display.value += '4'">
+                <input class="button digits" type="button" value="5" onclick="calculator.display.value += '5'">
+                <input class="button digits" type="button" value="6" onclick="calculator.display.value += '6'">
+                <input class="button mathButtons" type="button" value="-" onclick="calculator.display.value += ' - '">
+                <br>
+                <input class="button digits" type="button" value="1" onclick="calculator.display.value += '1'">
+                <input class="button digits" type="button" value="2" onclick="calculator.display.value += '2'">
+                <input class="button digits" type="button" value="3" onclick="calculator.display.value += '3'">
+                <input class="button mathButtons" type="button" value="x" onclick="calculator.display.value += ' * '">
+                <br>
+                <input id="clearButton" class="button" type="button" value="C" onclick="calculator.display.value = ''">
+                <input class="button digits" type="button" value="0" onclick="calculator.display.value += '0'">
+                <input class="button mathButtons" type="button" value="=" onclick="calculator.display.value = eval(calculator.display.value)">
+                <input class="button mathButtons" type="button" value="/" onclick="calculator.display.value += ' / '">
+            </form>
+        </fieldset>
+    </div>
+</body>
+</html>
+
+CSS CODE:
+body {
+  background-color: #faf8f8;
+  font-family: Tahoma;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100;
+  width: 100;
+}
+
+#container {
+  width: 200px;
+  padding: 8px 8px 20px 8px;
+  margin: 20px auto;
+  background-color: #ababab;
+  border-radius: 4px;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #c1c1c1;
+  border-left: 2px solid #c1c1c1;
+}
+
+#display {
+  display: block;
+  margin: 15px auto;
+  height: 42px;
+  width: 174px;
+  padding: 0 10px;
+  border-radius: 4px;
+  border-top: 2px solid #c1c1c1;
+  border-right: 2px solid #c1c1c1;
+  border-bottom: 2px solid #fff;
+  border-left: 2px solid #fff;
+  background-color: #fff;
+
+  font-size: 28px;
+  color: #666;
+  text-align: right;
+  font-weight: 400;
+}
+
+.button {
+  display: inline-block;
+  margin: 2px;
+  width: 42px;
+  height: 42px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.mathButtons {
+  margin: 2px 2px 6px 2px;
+  color: #fff;
+  text-shadow: -1px -1px 0px #44006f;
+  background-color: #434343;
+  border-top: 2px solid #c1c1c1;
+  border-right: 2px solid #c1c1c1;
+  border-bottom: 2px solid #181818;
+  border-left: 2px solid #181818;
+}
+
+.digits {
+  color: #181818;
+  text-shadow: 1px 1px 0px #fff;
+  background-color: #ebebeb;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #c1c1c1;
+  border-left: 2px solid #c1c1c1;
+  border-radius: 4px;
+}
+
+.digits:hover,
+.mathButtons:hover,
+#clearButton:hover {
+  background-color: #ffba75;
+  box-shadow: 0px 0px 2px #ffba75, inset 0px -20px 1px #ff8000;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #ae5700;
+  border-left: 2px solid #ae5700;
+}
+
+#clearButton {
+  color: #fff;
+  text-shadow: -1px -1px 0px #44006f;
+  background-color: #d20000;
+  border-top: 2px solid #ff8484;
+  border-right: 2px solid #ff8484;
+  border-bottom: 2px solid #800000;
+  border-left: 2px solid #800000;
+}
